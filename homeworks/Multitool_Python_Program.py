@@ -1,6 +1,7 @@
 import sys
 
 
+# Program przelicza liczbę binarną na dziesiętną.
 def binary(number):
     number_len = len(str(number))
     if number_len != 6:
@@ -15,16 +16,19 @@ def binary(number):
         print(f'Podana liczba binarna w zapisie dziesiętnym to {y}.')
 
 
-def celsius_fahrenheit(fahrenheit):
-    celsius = int((fahrenheit - 32.0) * 5 / 9)
-    print(f'{fahrenheit} ° Fahrenheita to {celsius} ° Celsjusza')
-
-
+# Program przelicza stopnie Fahrenheita na Celsjusza.
 def fahrenheit_celsius(celsius):
     fahrenheit = int(((celsius * 9 / 5) + 32))
     print(f'{celsius} ° Celsjusza to {fahrenheit} ° Fahrenheita.')
 
 
+# Program przelicza stopnie Celsjusza na Fahrenheita.
+def celsius_fahrenheit(fahrenheit):
+    celsius = int((fahrenheit - 32.0) * 5 / 9)
+    print(f'{fahrenheit} ° Fahrenheita to {celsius} ° Celsjusza')
+
+
+# Program sprawdza czy liczba jest podzielne przez 3,5 oraz 7.
 def div_number_3a5a7(x):
     if x % 3 == 0 and x % 5 == 0 and x % 7 == 0:
         print('Liczba  jest podzielna!')
@@ -32,6 +36,7 @@ def div_number_3a5a7(x):
         print('Liczba nie jest podzielna!')
 
 
+# Program  sprawdza czy liczba jest podzielna przez 3 lub 5 lub 7.
 def div_number_3or5or7(x):
     if x % 3 == 0 or x % 5 == 0 or x % 7 == 0:
         print('Liczba jest podzielna!')
@@ -39,6 +44,7 @@ def div_number_3or5or7(x):
         print('Liczba nie jest podzielna!')
 
 
+# Program sprawdza czy podana liczba jest liczbą parzystą czy nieparzystą.
 def even_number(x):
     if x % 2 == 0:
         print('Liczba jest parzysta!')
@@ -46,16 +52,19 @@ def even_number(x):
         print('Liczba jest nieparzysta!')
 
 
+# Program wyświetla pierwszą i ostatnią cyfrę w liczbie.
 def first_last_digit(number):
     print('Pierwsza cyfra to: ', number[0])
     print('Ostatnia cyfra to: ', number[-1])
 
 
+# Program oblicza pole powierzchni koła.
 def triangle_area(radius):
     area = ((radius ** 2) * 3.14)
     print(f'Pole wynosi {area}')
 
 
+# Program rysuje prostokąt o podanych rozmiarach za pomocą znaków +, - , | .
 def square(x, y):
     for i in range(0, x):
         for j in range(0, y):
@@ -72,6 +81,7 @@ def square(x, y):
         print()
 
 
+# Program oblicza czy dany rok jest rokiem przestępnym.
 def leap_year(year):
     if year % 4 == 0:
         print(f'Rok {year} jest rokiem przestępnym.')
@@ -79,6 +89,7 @@ def leap_year(year):
         print(f'Rok {year} nie jest rokiem przestępnym.')
 
 
+# Program za pomocą znaku # rysuje piramidę.
 def pyramid(width):
     for i in range(0, width):
         for j in range(0, width - i):
@@ -88,6 +99,7 @@ def pyramid(width):
         print("")
 
 
+# Program przelicza wiek psa na wiek człowieka
 def age_dog(year_dog):
     if year_dog > 2:
         age = 21 + (year_dog - 2) * 4
@@ -96,6 +108,7 @@ def age_dog(year_dog):
     print(f'Wiek psa w ludzkich latach wynosi {age}')
 
 
+# Program rozmienia podaną kwote na monety.
 def coins_change(n):
     coins = [5, 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01]
     coins_a = [500, 200, 100, 50, 20, 10, 5, 2, 1]
@@ -131,17 +144,18 @@ def value_error():
         exit()
 
     def two():
-        print('Program przelicza stopnie Fahrenheita na Celsjusza.\n'
-              'Używa do tego wzoru Celsius = (Fahrenheit – 32) * 5/9.')
-        fahrenheit = float(input('Podaj temperaturę w stopniach Fahrenheita: '))
-        celsius_fahrenheit(fahrenheit)
-        exit()
-
-    def three():
         print('Program przelicza stopnie Celsjusza na Fahrenheita.\n'
               'Używa do tego wzoru Fahrenheit=((Celsius*9/5)+32.')
         celsius = float(input('Podaj temperaturę w stopniach Celsjusza: '))
         fahrenheit_celsius(celsius)
+        exit()
+
+    def three():
+
+        print('Program przelicza stopnie Fahrenheita na Celsjusza.\n'
+              'Używa do tego wzoru Celsius = (Fahrenheit – 32) * 5/9.')
+        fahrenheit = float(input('Podaj temperaturę w stopniach Fahrenheita: '))
+        celsius_fahrenheit(fahrenheit)
         exit()
 
     def four():
@@ -253,8 +267,8 @@ def value_error():
 
 print('Witaj w Multitool Python Program by iSA ')
 print('1)Program przelicza liczbę binarną na dziesiętną. \n'
-      '2)Program przelicza stopnie Fahrenheita na Celsjusza.\n'
-      '3)Program przelicza stopnie Celsjusza na Fahrenheita.\n'
+      '2)Program przelicza stopnie Celsjusza na Fahrenheita.\n'
+      '3)Program przelicza stopnie Fahrenheita na Celsjusza.\n'
       '4)Program sprawdza czy liczba jest podzielne przez 3,5 oraz 7.\n'
       '5)Program  sprawdza czy liczba jest podzielna przez 3 lub 5 lub 7.\n'
       '6)Program sprawdza czy podana liczba jest liczbą parzystą czy nieparzystą.\n'
@@ -266,5 +280,3 @@ print('1)Program przelicza liczbę binarną na dziesiętną. \n'
       '12)Program przelicza wiek psa na wiek człowieka\n'
       '13)Program rozmienia podaną kwote na monety. ')
 value_error()
-
-
