@@ -59,7 +59,7 @@ def first_last_digit(number):
 
 
 # Program oblicza pole powierzchni koła.
-def triangle_area(radius):
+def area_circle(radius):
     area = ((radius ** 2) * 3.14)
     print(f'Pole wynosi {area}')
 
@@ -187,7 +187,7 @@ def value_error():
         n = input('Podaj dlugość promienia: ')  # wprowadzenie kwoty jako stringa
         x = n.replace(",", ".")  # zamiana ewentualnego przecinka na kropke
         radius = float(x)  # zamiana stringa na floata
-        triangle_area(radius)  # wykonanie funkcji
+        area_circle(radius)  # wykonanie funkcji
         exit()
 
     def nine():
